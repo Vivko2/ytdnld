@@ -10,6 +10,7 @@ import os
 def Download(link):
     youtubeObject = YouTube(link)
     youtubeObject = youtubeObject.streams.get_highest_resolution()
+    # youtubeObject = youtubeObject.streams.get_audio_only()
     youtubeObject.download()
     return youtubeObject.default_filename
 
